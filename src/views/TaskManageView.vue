@@ -1,239 +1,420 @@
 <template>
-  <div class="page">
-    <!-- HERO SECTION -->
-    <section class="section hero">
-      <div class="hero-header">
-        <p class="logo">TaskMan</p>
-        <button class="cta">Try free</button>
-      </div>
+    <div class="page">
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <!-- Header -->
+            <div class="hero-header">
+                <h1 class="logo">TaskMan</h1>
+                <button class="cta">Try free</button>
+            </div>
 
-      <div class="hero-section">
-      <div>
-        <h1>Task Management And Lists Tool</h1>
-        <p>There are many passages of Lorem Ipsum available but the majority have alteration in some form by injected humor.</p>
-        <input>
-        <button class="cta">Try for free</button>
-        <span class="logo-section">
-            <span class="logo-col">
-                 <img :src="cartoonLogo" alt="Logo" class="logo-img" />
-                  <img :src="bookingLogo" alt="Logo" class="logo-img" />
-                   <img :src="dropBoxLogo" alt="Logo" class="logo-img" />
-            </span>
-            <span class="logo-col">
-                 <img :src="toshibaLogo" alt="Logo" class="logo-img" />
-                  <img :src="slackLogo" alt="Logo" class="logo-img" />
-                   <img :src="netflixLogo" alt="Logo" class="logo-img" />
-            </span>
-            <span class="logo-col">
-                 <img :src="spotifyLogo" alt="Logo" class="logo-img" />
-                <img :src="coaColaLogo" alt="Logo" class="logo-img" />
-                <img :src="redbullLogo" alt="Logo" class="logo-img" />
+            <!-- Main Hero Content -->
+            <div class="hero-body">
+                <!-- Left Content -->
+                <div class="hero-left">
+                    <div class="text-block">
+                        <h1>Task Management And Lists Tool</h1>
+                        <p>
+                            There are many passages of Lorem Ipsum available but the majority
+                            have alteration in some form by injected humor.
+                        </p>
+                    </div>
 
-            </span>
-        </span>
-      </div>
-       <div>
-        <span class="circle circle-1" />
-        <span class="circle circle-2" />
-        <span class="circle circle-3" />
-      </div>
-      </div>    
-    </section>
+                    <div class="input-section">
+                        <input placeholder="Name@company.com" />
+                        <button class="cta">Try for free</button>
+                    </div>
 
-    <!-- ABOUT SECTION -->
-    <section class="section light">
-      <h2>About Section</h2>
-        <div class="hero-content">
-        <h1>Manage your tasks beautifully</h1>
-        <p>Organize, track, and complete your work efficiently.</p>
-      </div>
-    </section>
+                    <div class="logo-section">
+                        <div class="logo-row">
+                            <img :src="cartoonLogo" class="logo-img" />
+                            <img :src="bookingLogo" class="logo-img" />
+                            <img :src="dropBoxLogo" class="logo-img" />
+                        </div>
+                        <div class="logo-row">
+                            <img :src="toshibaLogo" class="logo-img" />
+                            <img :src="slackLogo" class="logo-img" />
+                            <img :src="netflixLogo" class="logo-img" />
+                        </div>
+                        <div class="logo-row">
+                            <img :src="spotifyLogo" class="logo-img" />
+                            <img :src="coaColaLogo" class="logo-img" />
+                            <img :src="redbullLogo" class="logo-img" />
+                        </div>
+                    </div>
+                </div>
 
-    <!-- FEATURES SECTION -->
-    <section class="section dark">
-      <h2>Features Section</h2>
-    </section>
-  </div>
+                <!-- Right Circles -->
+              <div class="circle-wrapper">
+                <img :src="blueCircle" class="circle blue" ref="blueRef" /> 
+                <img :src="yellowCircle" class="circle yellow" ref="yellowRef" /> 
+                <img :src="greyCircle" class="circle grey" ref="greyRef" />
+                  <img :src="heroCard1" class="hero-card hero1" ref="heroCard1Ref" />
+                  <img :src="heroCard2" class="hero-card hero2" ref="heroCard2Ref" />
+                  <img :src="heroCard3" class="hero-card hero3" ref="heroCard3Ref" />
+                  <img :src="heroCard4" class="hero-card hero4" ref="heroCard4Ref" />
+               </div>
+
+               <!-- <div class="hero-wrapper">
+
+               </div> -->
+
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section class="benefits-section">
+            <h2>Key benefits of using task <br> management software</h2>
+            <!-- <p>Organize, track, and complete your work efficiently.</p> -->
+            <div class="benefits-row">
+                <div class="benefit">
+                    <img :src="benefitTrack">
+                    <p>
+                        Keep tasks in one place
+                    </p>
+                    <p>
+                        description ...
+                    </p>
+                </div>
+                <div class="benefit">
+                    <img :src="benefitPrioritize">
+                    <p>
+                        Keep tasks in one place
+                    </p>
+                    <p>
+                        description ...
+                    </p>
+                </div>
+                <div class="benefit">
+                    <img :src="benefitCollab">
+                    <p>
+                        Keep tasks in one place
+                    </p>
+                    <p>
+                        description ...
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits-section">
+            <h2>Get better work done</h2>
+            <p>See why millions of people across 195 countries use TaskMan</p>
+            <div>
+                <input placeholder="Name@company.com" />
+                <button class="cta">Try for free</button>
+            </div>
+        </section>
+    </div>
 </template>
 
 <script setup>
-    import bookingLogo from '@/assets/Logos/Booking.com_logo.svg'
-    import cartoonLogo from '@/assets/Logos/Cartoon_Network_logo.svg'
-    import coaColaLogo from '@/assets/Logos/CocaCola_logo.svg'
-    import dropBoxLogo from '@/assets/Logos/Dropbox_logo.svg'
-    import netflixLogo from '@/assets/Logos/Netflix_logo.svg'
-    import redbullLogo from '@/assets/Logos/RedBull_logo.svg'
-    import slackLogo from '@/assets/Logos/Slack_logo.svg'
-    import spotifyLogo from '@/assets/Logos/Spotify_logo.svg'
-    import toshibaLogo from '@/assets/Logos/Toshiba_logo.svg'
+import bookingLogo from '@/assets/Logos/Booking.com_logo.svg'
+import cartoonLogo from '@/assets/Logos/Cartoon_Network_logo.svg'
+import coaColaLogo from '@/assets/Logos/CocaCola_logo.svg'
+import dropBoxLogo from '@/assets/Logos/Dropbox_logo.svg'
+import netflixLogo from '@/assets/Logos/Netflix_logo.svg'
+import redbullLogo from '@/assets/Logos/RedBull_logo.svg'
+import slackLogo from '@/assets/Logos/Slack_logo.svg'
+import spotifyLogo from '@/assets/Logos/Spotify_logo.svg'
+import toshibaLogo from '@/assets/Logos/Toshiba_logo.svg'
+import blueCircle from '@/assets/Hero/Hero_Shapes_1.svg'
+import yellowCircle from '@/assets/Hero/Hero_Shapes_2.svg'
+import greyCircle from '@/assets/Hero/Hero_Shapes_3.svg'
+import heroCard4 from '@/assets/Hero/Hero_Illustration_Card-1.svg'
+import heroCard3 from '@/assets/Hero/Hero_Illustration_Card-2.svg'
+import heroCard1 from '@/assets/Hero/Hero_Illustration_Card-3.svg'
+import heroCard2 from '@/assets/Hero/Hero_Illustration_Card-4.svg'
+import benefitTrack from '@/assets/Benefits/Benefits_Icon_Track.svg'
+import benefitPrioritize from '@/assets/Benefits/Benefits_Icon_Priotitize.svg'
+import benefitCollab from '@/assets/Benefits/Benefits_Icon_Collaborate.svg'
+
+import { onMounted, ref } from 'vue'
+import gsap from 'gsap'
+
+const blueRef = ref(null)
+const yellowRef = ref(null)
+const greyRef = ref(null)
+const heroCard1Ref = ref(null)
+const heroCard2Ref = ref(null)
+const heroCard3Ref = ref(null)
+const heroCard4Ref = ref(null)
+
+onMounted(() => {
+  const tl = gsap.timeline()
+
+  tl.from(blueRef.value, {
+    x: 350,
+    scale: 0.7,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out"
+  })
+  .from(yellowRef.value, {
+    x: 300,
+    scale: 0.6,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out"
+  }, "-=0.7")
+  .from(greyRef.value, {
+    x: 250,
+    scale: 0.5,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out"
+  }, "-=0.7")
+    .from(heroCard1Ref.value, {
+    x: 200,
+    scale: 0.5,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out"
+  }, "-=0.7")
+    .from(heroCard2Ref.value, {
+    x: 150,
+    scale: 0.5,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out"
+  }, "-=0.7")
+    .from(heroCard3Ref.value, {
+    x: 100,
+    scale: 0.5,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out"
+  }, "-=0.7")
+    .from(heroCard4Ref.value, {
+    x: 50,
+    scale: 0.5,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out"
+  }, "-=0.7")
+})
 </script>
 
 <style>
 /* RESET */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Smooth scroll */
-html {
-  scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .page {
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
 }
 
-/* SECTION BASE */
-.section {
-  min-height: 200vh;
-  padding: 3rem 8%;
-  display: flex;
-  flex-direction: column;
-  /* justify-content: center; */
-}
+/* ================= HERO ================= */
 
-/* HERO */
 .hero {
-  background: linear-gradient(135deg, #1e293b, #0f172a);
-  color: white;
+    min-height: 100vh;
+    padding: 3rem 0 3rem 8%;
+    position: relative;
+    background: white;
 }
 
-/* HEADER INSIDE HERO */
+/* HEADER */
 .hero-header {
-  display: flex;
-  justify-content: space-between; /* pushes button right */
-  align-items: center;
-  width: 100%;
-  margin-bottom: 4rem;
+    padding-right: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4rem;
 }
 
-/* CTA BUTTON */
+/* BODY */
+.hero-body {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    /* gap: 4rem; */
+}
+
+/* LEFT SIDE */
+.hero-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* TEXT */
+.text-block h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.text-block p {
+    font-size: 1.1rem;
+    color: #6b7280;
+    line-height: 1.6;
+    max-width: 480px;
+}
+
+/* INPUT SECTION */
+.input-section {
+    display: flex;
+    gap: 16px;
+}
+
+input {
+    padding: 12px 20px;
+    border: 1px solid #d1d5db;
+    border-radius: 30px;
+    width: 260px;
+    font-size: 0.95rem;
+    outline: none;
+}
+
+input:focus {
+    border-color: #0635FF;
+}
+
+/* BUTTON */
 .cta {
-  padding: 10px 22px;
-  background: #6366f1;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: all 0.3s ease;
+    padding: 12px 24px;
+    background: #0635FF;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+    z-index: 100;
 }
 
 .cta:hover {
-  background: #4f46e5;
-  transform: translateY(-2px);
+    background: #4f46e5;
+    transform: translateY(-2px);
 }
 
-/* HERO CONTENT */
-.hero-content h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.hero-content p {
-  font-size: 1.2rem;
-  opacity: 0.8;
-}
-
-.hero-section {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-}
-
-.hero-section div {
-    width: 50%;
-}
-
-/* LIGHT SECTION */
-.light {
-  background: #f8fafc;
-  color: #0f172a;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* DARK SECTION */
-.dark {
-  background: #0f172a;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* CUSTOM SCROLLBAR */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #6366f1;
-  border-radius: 20px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #4f46e5;
-}
-
-.circle {
-  position: absolute;
-  right: -200px;
-  border-radius: 50%;
-  opacity: 0;
-  transform: scale(0.5);
-  animation: fanOut 1.2s ease-out forwards;
-}
-
-.circle-1 {
-  width: 300px;
-  height: 300px;
-  background: #6366f1;
-  top: 20%;
-  animation-delay: 0.2s;
-}
-
-.circle-2 {
-  width: 200px;
-  height: 200px;
-  background: #818cf8;
-  top: 40%;
-  animation-delay: 0.4s;
-}
-
-.circle-3 {
-  width: 150px;
-  height: 150px;
-  background: #a5b4fc;
-  top: 60%;
-  animation-delay: 0.6s;
-}
-
-@keyframes fanOut {
-  to {
-    right: 10%;
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
+/* LOGOS */
 .logo-section {
-    padding: 1rem 2rem;
+    padding: 30px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2.5rem;
 }
 
-.logo-col {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-  justify-content: space-between;
-  padding: 30px 30px;
+.logo-row {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .logo-img {
-  height: 30px;
+    height: 35px;
+    opacity: 0.8;
+}
+
+/* ================= CIRCLES ================= */
+
+
+.circle-wrapper {
+    flex: 1;
+    position: relative;
+    height: 1000px;
+    overflow: hidden;
+}
+
+.hero-wrapper {
+    flex: 1;
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+}
+
+/* .circle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 600px;
+    transform-origin: right center;
+} */
+
+.circle {
+  position: absolute;
+  top: 0;
+  right: -200px;
+  width: 900px;
+  transform: translateY(-50%);
+}
+
+.blue {
+    z-index: 1;
+     transform: translateX(80px);
+}
+
+.yellow {
+    z-index: 2;
+    transform: translateX(160px);
+}
+
+.grey {
+    z-index: 3;
+    transform: translateX(320px);
+}
+
+.hero-card {
+  position: absolute;  
+  width: 420px;
+  z-index: 10;
+}
+
+.hero1 { 
+  top: 25%;
+  right: 180px;
+}
+
+.hero2 { 
+  top: 45%;
+  right: 120px;
+}
+
+.hero3 { 
+  top: 60%;
+  right: 240px;
+}
+
+.hero4 { 
+  top: 35%;
+  right: 300px;
+}
+
+
+
+/* ================= BENEFITS SECTION ================= */
+
+.benefits-section {
+    min-height: 60vh;
+    /* background: #f8fafc; */
+    padding: 6rem 8%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.benefits-row {
+    padding: 1rem 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.benefits-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.benefits-section p {
+    color: #6b7280;
 }
 </style>

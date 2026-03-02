@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
-import TaskManView from '../src/views/TaskManageView.vue'
+import TaskManView from './views/TaskManageView.vue'
 </script>
 
 <template>
