@@ -1,6 +1,6 @@
 <template>
   <form @submit.prevent="handleSignup">
-    <div>
+    <div class="input-section">
         <input v-model="email" placeholder="Name@company.com" />
         <button type="submit" class="cta">Try for free</button>
     </div>
@@ -58,3 +58,24 @@ const simulateEmail = (email: string, coupon: string) => {
   `)
 }
 </script>
+
+<style>
+/* INPUT SECTION */
+.input-section {
+    display: flex;
+    gap: 16px;
+}
+
+input {
+    padding: 12px 20px;
+    border: 1px solid #d1d5db;
+    border-radius: 30px;
+    width: 260px;
+    font-size: 0.95rem;
+    outline: none;
+}
+
+input:focus {
+    border-color: #0635FF;
+}
+</style>
