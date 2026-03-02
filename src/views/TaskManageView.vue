@@ -45,20 +45,15 @@
                 </div>
 
                 <!-- Right Circles -->
-              <div class="circle-wrapper">
-                <img :src="blueCircle" class="circle blue" ref="blueRef" /> 
-                <img :src="yellowCircle" class="circle yellow" ref="yellowRef" /> 
-                <img :src="greyCircle" class="circle grey" ref="greyRef" />
+              <div class="hero-wrapper">
+                  <img :src="blueCircle" class="circle blue" ref="blueRef" /> 
+                  <img :src="yellowCircle" class="circle yellow" ref="yellowRef" /> 
+                  <img :src="greyCircle" class="circle grey" ref="greyRef" />
                   <img :src="heroCard1" class="hero-card hero1" ref="heroCard1Ref" />
                   <img :src="heroCard2" class="hero-card hero2" ref="heroCard2Ref" />
                   <img :src="heroCard3" class="hero-card hero3" ref="heroCard3Ref" />
                   <img :src="heroCard4" class="hero-card hero4" ref="heroCard4Ref" />
                </div>
-
-               <!-- <div class="hero-wrapper">
-
-               </div> -->
-
             </div>
         </section>
 
@@ -317,27 +312,12 @@ input:focus {
 /* ================= CIRCLES ================= */
 
 
-.circle-wrapper {
+.hero-wrapper {
     flex: 1;
     position: relative;
     height: 1000px;
     overflow: hidden;
 }
-
-.hero-wrapper {
-    flex: 1;
-    position: relative;
-    height: 600px;
-    overflow: hidden;
-}
-
-/* .circle {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 600px;
-    transform-origin: right center;
-} */
 
 .circle {
   position: absolute;
