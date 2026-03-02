@@ -95,15 +95,17 @@
         <section class="benefits-section">
             <h2>Get better work done</h2>
             <p>See why millions of people across 195 countries use TaskMan</p>
-            <div>
+            <SignUp />
+            <!-- <div>
                 <input placeholder="Name@company.com" />
                 <button class="cta">Try for free</button>
-            </div>
+            </div> -->
         </section>
     </div>
 </template>
 
 <script setup>
+import SignUp from '../components/signUp.vue'
 import bookingLogo from '@/assets/Logos/Booking.com_logo.svg'
 import cartoonLogo from '@/assets/Logos/Cartoon_Network_logo.svg'
 import coaColaLogo from '@/assets/Logos/CocaCola_logo.svg'
@@ -310,7 +312,6 @@ input:focus {
 }
 
 /* ================= CIRCLES ================= */
-
 
 .hero-wrapper {
     flex: 1;

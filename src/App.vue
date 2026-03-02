@@ -1,19 +1,12 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
 import TaskManView from './views/TaskManageView.vue'
 </script>
 
 <template>
   <header>
-    <!-- <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-      <TaskManView />
-    </div> -->
   </header>
   <main>
      <TaskManView />
-    <!-- <TheWelcome /> -->
   </main>
 </template>
 
