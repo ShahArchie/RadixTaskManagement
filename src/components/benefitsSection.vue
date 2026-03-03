@@ -1,33 +1,32 @@
 <template>
     <section class="benefits-section">
         <h2>Key benefits of using task <br> management software</h2>
-        <!-- <p>Organize, track, and complete your work efficiently.</p> -->
         <div class="benefits-row">
             <div class="benefit">
-                <img :src="benefitTrack">
-                <p>
+                <img :src="benefitTrack" class="item">
+                <h3 class="item">
                     Keep tasks in one place
-                </p>
-                <p>
-                    description ...
+                </h3>
+                <p class="item">
+                    {{ benefits1 }}
                 </p>
             </div>
             <div class="benefit">
-                <img :src="benefitPrioritize">
-                <p>
+                <img :src="benefitPrioritize" class="item">
+                <h3 class="item">
                     Keep tasks in one place
-                </p>
-                <p>
-                    description ...
+                </h3>
+                <p class="item">
+                     {{ benefits2 }}
                 </p>
             </div>
             <div class="benefit">
-                <img :src="benefitCollab">
-                <p>
+                <img :src="benefitCollab" class="item">
+                <h3 class="item">
                     Keep tasks in one place
-                </p>
-                <p>
-                    description ...
+                </h3>
+                <p class="item">
+                     {{ benefits2 }}
                 </p>
             </div>
         </div>
@@ -38,6 +37,38 @@
 import benefitTrack from '@/assets/Benefits/Benefits_Icon_Track.svg'
 import benefitPrioritize from '@/assets/Benefits/Benefits_Icon_Priotitize.svg'
 import benefitCollab from '@/assets/Benefits/Benefits_Icon_Collaborate.svg'
+import { benefits1, benefits2 } from '../utils/constants'
+import { onMounted, nextTick } from "vue"
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+
+gsap.registerPlugin(ScrollTrigger)
+
+onMounted(async () => {
+    await nextTick()
+
+    const rows = gsap.utils.toArray('.benefit')
+
+    rows.forEach((benefit) => {
+        const elements = benefit.querySelectorAll('.item')
+
+        gsap.from(elements, {
+            scrollTrigger: {
+                trigger: benefit,
+                start: "top 80%",
+                toggleActions: "play none none reverse",
+                markers: false // keep true for debugging
+            },
+            opacity: 0,
+            y: 100,
+            duration: 2,
+            ease: "power3.out",
+            stagger: 0.3
+        })
+    })
+
+    ScrollTrigger.refresh()
+})
 </script>
 
 <style>
@@ -56,6 +87,10 @@ import benefitCollab from '@/assets/Benefits/Benefits_Icon_Collaborate.svg'
     padding: 1rem 10%;
     display: flex;
     justify-content: space-between;
+    grid-template-rows: 100vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 40px;
+    grid-column-gap: 30px;
 }
 
 .benefits-section h2 {
@@ -65,5 +100,12 @@ import benefitCollab from '@/assets/Benefits/Benefits_Icon_Collaborate.svg'
 
 .benefits-section p {
     color: #6b7280;
+    padding-top: 1rem;
+}
+
+.h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
 }
 </style>

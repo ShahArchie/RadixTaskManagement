@@ -36,19 +36,9 @@
       </div>
     </section>
 
-    <!-- BENEFITS SECTION -->
      <benefitsSection />
-
      <whySection />
-
-
-    <section class="benefits-section">
-      <h2>Get better work done</h2>
-      <p>See why millions of people across 195 countries use TaskMan</p>
-      <div style="display: flex; justify-content: center;">
-        <signUp />
-      </div>
-    </section>
+     <tryForFreeSection />
   </div>
 </template>
 
@@ -57,6 +47,7 @@ import signUp from '../components/signUp.vue'
 import logoSection from '@/components/logoSection.vue'
 import benefitsSection from '@/components/benefitsSection.vue'
 import whySection from '@/components/whySection.vue'
+import tryForFreeSection from '@/components/tryForFreeSection.vue'
 import blueCircle from '@/assets/Hero/Hero_Shapes_1.svg'
 import yellowCircle from '@/assets/Hero/Hero_Shapes_2.svg'
 import greyCircle from '@/assets/Hero/Hero_Shapes_3.svg'
@@ -265,26 +256,8 @@ onMounted(() => {
   right: 300px;
 }
 
-.why-shape {
-  /* position: relative; */
-  top: 0;
-  left: -200px;
-  /* height: 200px;
-  width: 400px; */
-  /* transform: translateX(-50%); */
-  overflow: hidden;
-  width: 100%;
-  max-width: 1000px;
-  height: auto;
-}
-
 .hero-right {
   padding: 2rem;
   max-width: 50%;
-}
-
-.arrow-shape {
-  height: 20px;
-  width: 20px;
 }
 </style>
